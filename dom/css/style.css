@@ -46,7 +46,10 @@ html {
     top:50px;
     right:50px;
   }
-  a:hover{
-   visibility:visible
+  .hidden-text{
+   opacity: 0;
   }
+  .container:hover .hidden-text {
+   opacity: 1;
+ }
   
