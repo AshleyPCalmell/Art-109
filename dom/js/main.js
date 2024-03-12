@@ -10,10 +10,11 @@ setTimeout( function(){
 // click event on header changes background color
 document.querySelector("header").onclick=function(){
    console.log("clicked header");
-   document.querySelector("body").style.backgroundColor = "black";
+   document.querySelector("body").style.backgroundColor = "grey";
 }
 
 // document.querySelector("#image-0").addEventListener("click",function(){
+    
 //     document.querySelector("#image-0").style.visibility="visible";
 //     alert("bark bark");
 // })

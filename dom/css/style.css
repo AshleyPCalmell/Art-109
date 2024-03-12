@@ -16,7 +16,7 @@ html {
  *:before,
  *:after {
     box-sizing: inherit;
-    margin: 0;
+    margin: 30;
     padding: 0;
  }
  
@@ -31,7 +31,7 @@ html {
      font-size: 1.6rem;
     /* font-size 1.6rem is now the same as 16px */
     line-height: 1.6;
-    background-color: rgb(162, 165, 196);
+    background-color: rgb(119, 123, 158);
  }
  header {
     padding: 50px;
@@ -39,6 +39,7 @@ html {
     text-align:center;
  }
   main{
+   
   }
   .image-div{
     display: inline-block;
@@ -51,5 +52,5 @@ html {
   }
   .container:hover .hidden-text {
    opacity: 1;
+   color:rgb(86, 22, 65);
  }
-  
