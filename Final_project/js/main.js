@@ -6,14 +6,14 @@ import {GLTFLoader} from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/loa
 var scene = new THREE.Scene();
 // Adjusted camera parameters
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.set(0, -4.5, 7);
+camera.position.set(0, -4, 7);
 var renderer = new THREE.WebGLRenderer({
 
   antialias: true
 });
 
 //canvas ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-renderer.setClearColor(0x404040);
+renderer.setClearColor(0x000000);
 var canvas = renderer.domElement;
 document.body.appendChild(canvas);
 
@@ -24,6 +24,13 @@ scene.add(light);
 scene.add(new THREE.AmbientLight(0xffffff, 0.5));
 
 
+
+
+// Adding another light
+var pointLight = new THREE.PointLight(0xffffff, 0.5);
+pointLight.position.set(-4, -4, 3); // Adjust position as needed
+scene.add(pointLight);
+
 let base = new THREE.Object3D();
 scene.add(base);
 
@@ -32,15 +39,13 @@ scene.add(base);
 const loader = new GLTFLoader().setPath('assets1/');
 loader.load('eyeCOLORED.glb', 
     function (gltf) {
-        gltf.scene.scale.setScalar(.5); // Scale factor of 2 (adjust as needed)
+        gltf.scene.scale.setScalar(.7); // Scale factor of 2 (adjust as needed)
         
         gltf.scene.rotation.y += -300;
        
         base.add(gltf.scene);
     },
 );
-
-
 
 
 
